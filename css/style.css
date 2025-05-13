@@ -1,0 +1,183 @@
+/*cores*/
+:root {
+    --beige: rgb(250, 255, 235);
+    --black: rgb(28, 28, 28);
+    --beige2: rgb(231, 223, 204);
+}
+
+:root {
+    --titulo: Georgia, 'Times New Roman', Times, serif;
+    --texto:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--texto);
+    background-color: var(--beige);
+    color: var(--black);
+}
+
+main {
+    margin-top: 20px;
+}
+
+/*Header*/
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    background-color: var(--black);
+    color: var(--beige);
+    font-family: var(--titulo);
+}
+
+header h1 {
+    display: flex;
+    gap: 15px;
+    font-size: 40px;
+    align-items: center;
+}
+
+header h1 i {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Cards */
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.cards .card {
+    width: 25rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--beige2);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: var(--black) 0px 3px 5px;
+}
+
+.cards .card:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out ;
+}
+
+
+/*card*/
+.card h2 {
+    font-size: 20px;
+    text-decoration: underline 1px;
+    text-underline-offset: 2px;
+    font-family: var(--titulo);
+    cursor: pointer;
+}
+
+.card .ex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    cursor: default;
+}
+
+.card .ex h3 {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.card .ex h3 i {
+    font-size: 10px;
+}
+
+.main_card {
+    width: 70%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--beige2);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: var(--black) 0px 3px 5px;
+}
+
+.main_card h2 {
+    font-size: 30px;
+    text-decoration: underline 1px;
+    text-underline-offset: 2px;
+    font-family: var(--titulo);
+}
+
+.main_card p {
+    display: none;
+}
+
+.main_card h3 {
+    font-size: 15px;
+}
+
+.main_card h3 i {
+    font-size: 13px;
+}
+
+/*Resultado*/
+
+.cripto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.cripto .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    font-size: 15px;
+}
+
+.cripto .input textarea {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.cripto button {
+    width: 15rem;
+    height: 3rem;
+    font-size: 15px;
+    font-family: var(--texto);
+    background-color: var(--beige2);
+    border: none;
+    box-shadow: var(--black) 0px 0px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cripto button:hover {
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+}
+
+.cripto .result {
+
+}
+
