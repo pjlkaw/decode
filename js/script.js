@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     main_card();
 })
 
-
 function main_card() {
     const title_cards = document.querySelectorAll('.card h2')
     const selected_card = document.getElementById('main_card')
@@ -28,14 +27,18 @@ function copy_result() {
         .catch(() => alert("Falha ao copiar o texto"));
 }
 
-
+//Criptografias
 function btn_send() {
-    //leitura do card selecionado após o clique, ler o h2 do card main e pegar o valor dele
+    //Tipo de cirpto selecionado
     const code_type = document.querySelector('.main_card h2').textContent;
     //input do usuario
     const user_text = document.getElementById('input').value;
 
-    //Código Alfabético
+    //Mostrar resultado e botão copiar
+    //document.getElementById('result').textContent = result
+    //document.getElementById('copy_result').style.display = "block";
+
+    //CÓDIGO ALFABÉTICO
     if (code_type == "Código Alfabético") {
         const result = user_text
         .toLowerCase()
@@ -54,9 +57,13 @@ function btn_send() {
         document.getElementById('copy_result').style.display = "block";
     }
 
-    //Base64
+    //BASE64
+    if (code_type == "Base64") {
+        result = btoa(user_text)
+        document.getElementById('result').textContent = result
+        document.getElementById('copy_result').style.display = "block";
+    }
 
-
-
+    //CIFRA DE CÉSAR
 
 }
