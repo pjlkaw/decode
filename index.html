@@ -13,77 +13,87 @@
     </header>
     <main>
 
-        <section id="card_section" class="cards" style="display: ;">
-            <div class="card" id= "card1"> 
-                <h2>Código Alfabético</h2>
-                <div>
-                    <p>A = 1, B = 2, C = 3...</p>
-                    <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+        <section class="decode-container">
+            <section id="card_section" class="cards" style="display: ;">
+                <div class="card" id= "card1"> 
+                    <h2>Código Alfabético</h2>
+                    <div>
+                        <p>A = 1, B = 2, C = 3...</p>
+                        <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card" id= "card2">
-                <h2>Base64</h2>
-                <div class="ex">
-                    <p>Texto = "Teste"</p>
-                    <p>Code = "Tm9pYQ=="</p>
-                    <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                <div class="card" id= "card2">
+                    <h2>Base64</h2>
+                    <div class="ex">
+                        <p>Texto = "Teste"</p>
+                        <p>Code = "Tm9pYQ=="</p>
+                        <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card" id= "card3">
-                <h2>Cifra de César</h2>
-                <div class="ex">
-                    <p>Texto = "Teste"</p>
-                    <p>Code = "Tm9pYQ=="</p>
-                    <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                <div class="card" id= "card3">
+                    <h2>Cifra de César</h2>
+                    <div class="ex">
+                        <p>Texto = "Teste"</p>
+                        <p>Code = "Tm9pYQ=="</p>
+                        <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card" id="card4">
-                <h2>ROT13</h2>
-                <div class="ex">
-                    <p>Texto = "Teste"</p>
-                    <p>Code = "Tm9pYQ=="</p>
-                    <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                <div class="card" id="card4">
+                    <h2>ROT13</h2>
+                    <div class="ex">
+                        <p>Texto = "Teste"</p>
+                        <p>Code = "Tm9pYQ=="</p>
+                        <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card" id= "card5">
-                <h2>Hexadecimal</h2>
-                <div class="ex">
-                    <p>Texto = "Teste"</p>
-                    <p>Code = "Tm9pYQ=="</p>
-                    <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                <div class="card" id= "card5">
+                    <h2>Hexadecimal</h2>
+                    <div class="ex">
+                        <p>Texto = "Teste"</p>
+                        <p>Code = "Tm9pYQ=="</p>
+                        <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card" id= "card6">
-                <h2>Código Morse</h2>
-                <div class="ex">
-                    <p>Texto = "Teste"</p>
-                    <p>Code = "Tm9pYQ=="</p>
-                    <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                <div class="card" id= "card6">
+                    <h2>Código Morse</h2>
+                    <div class="ex">
+                        <p>Texto = "Teste"</p>
+                        <p>Code = "Tm9pYQ=="</p>
+                        <h3>Saiba mais <i class="fa-solid fa-circle-info"></i></h3>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="cripto" style="display: none;">
+                
+                <div class="main_card" id="main_card">
+
+                </div>
+
+                <div class="input">
+                    <h2 for="input">Digite algo para cripitografar:</h2><br>
+                    <textarea name="input" id="input" rows="8" cols="60"></textarea>
+                </div>
+                <button id="btn_send" onclick="btn_send()" >Codificar</button>
+
+                <div class="result">
+                    <h2>Resultado:</h2>
+                    <p id="result"></p>
+                    <h3 id="copy_result" onclick="copy_result()" style="display: none;">Copiar Texto <i class="fa-solid fa-copy"></i></h3>
+                    <h3>Voltar <i class="fa-solid fa-curved-arrow-left"></i></h3>
+                </div>
+            </section>
         </section>
 
-        <section class="cripto" style="display: none;">
-            
-            <div class="main_card" id="main_card">
-
-            </div>
-
-            <div class="input">
-                <h2 for="input">Digite algo para cripitografar:</h2><br>
-                <textarea name="input" id="input" rows="8" cols="60"></textarea>
-            </div>
-            <button id="btn_send" onclick="btn_send">Codificar</button>
-
-            <div class="result">
-                <h2>Resultado:</h2>
-                <p id="result">Teste 456</p>
-                <h3>Voltar <i class="fa-solid fa-home"></i></h3>
+        <section class="info_container">
+            <div class="subtitle">
+            <h2>Veja mais informações</h2>
+            <i class="fa-solid fa-arrow-down"></i>
             </div>
         </section>
 
