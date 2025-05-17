@@ -95,6 +95,24 @@ function btn_send() {
         document.getElementById('copy_result').style.display = "block";
     }
 
+    //ROT13
+    else if (code_type == "ROT13") {
+        const shift = 13;
 
-
+        const result = user_text
+        .toLowerCase()
+        .split('')
+        .map(char => {
+            const cripto = char.charCodeAt(0)
+            if (cripto >= 97 && cripto <= 122) {
+                return String.fromCharCode(((cripto - 97 + shift) % 26) + 97)
+            }
+            else {
+                return char
+            }
+        })
+        .join('')
+        document.getElementById('result').textContent = result
+        document.getElementById('copy_result').style.display = "block";
+    }
 }
