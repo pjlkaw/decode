@@ -14,8 +14,8 @@
     <main>
 
         <section class="decode-container">
-            <section id="card_section" class="cards" style="display: ;">
-                <div class="card" id= "card1"> 
+            <section id="card_section" class="cards">
+                <div class="card" data-code="Código Alfabético"> 
                     <h2>Código Alfabético</h2>
                     <div>
                         <p>A = 1, B = 2, C = 3...</p>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
 
-                <div class="card" id= "card2">
+                <div class="card" data-code="Base64">
                     <h2>Base64</h2>
                     <div class="ex">
                         <p>Texto = "Teste"</p>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="card" id= "card3">
+                <div class="card" data-code="Cifra de César">
                     <h2>Cifra de César</h2>
                     <div class="ex">
                         <p>Texto = "Teste"</p>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
 
-                <div class="card" id="card4">
+                <div class="card" data-code="ROT13">
                     <h2>ROT13</h2>
                     <div class="ex">
                         <p>Texto = "Teste"</p>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="card" id= "card5">
+                <div class="card" data-code="Hexadecimal"">
                     <h2>Hexadecimal</h2>
                     <div class="ex">
                         <p>Texto = "Teste"</p>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="card" id= "card6">
+                <div class="card" data-code="Código Morse">
                     <h2>Código Morse</h2>
                     <div class="ex">
                         <p>Texto = "Teste"</p>
@@ -76,6 +76,9 @@
                 </div>
 
                 <div class="input">
+                    <div id="cesar_spacing" class="cesar_spacing" style="display: none">
+                        <h3>Espaçamento: <input id="spacing" type="number" value="3"> </h3>
+                    </div>
                     <h2 for="input">Digite algo para cripitografar:</h2><br>
                     <textarea name="input" id="input" rows="8" cols="60"></textarea>
                 </div>

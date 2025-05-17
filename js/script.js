@@ -12,10 +12,19 @@ function main_card() {
         title.addEventListener('click', function() {
             const card = this.parentNode;
             const card_content = card.innerHTML;
+            const code_type = card.getAttribute('data-code')
 
-            cripto.style = "display: flex;"
-            section.style = "display: none;"
+            //Exibe o card
+            cripto.style.display = "flex"
+            section.style.display = "none"
+
+            cripto.setAttribute('data-selected', code_type);
+
             selected_card.innerHTML = card_content
+
+            if (code_type == "Cifra de César") {
+                document.getElementById('cesar_spacing').style.display = "block"
+            }
         })
     })
 }
@@ -30,7 +39,8 @@ function copy_result() {
 //Criptografias
 function btn_send() {
     //Tipo de cirpto selecionado
-    const code_type = document.querySelector('.main_card h2').textContent;
+    const code_type = document.querySelector('.cripto').getAttribute('data-selected');
+
     //input do usuario
     const user_text = document.getElementById('input').value;
 
@@ -58,12 +68,33 @@ function btn_send() {
     }
 
     //BASE64
-    if (code_type == "Base64") {
+    else if (code_type == "Base64") {
         result = btoa(user_text)
         document.getElementById('result').textContent = result
         document.getElementById('copy_result').style.display = "block";
     }
 
     //CIFRA DE CÉSAR
+    else if (code_type == "Cifra de César") {
+        const shift = parseInt(document.getElementById('spacing').value);
+
+        const result = user_text
+        .toLowerCase()
+        .split('')
+        .map(char => {
+            const cripto = char.charCodeAt(0)
+            if (cripto >= 97 && cripto <= 122) {
+                return String.fromCharCode(((cripto - 97 + shift) % 26) + 97)
+            }
+            else {
+                return char
+            }
+        })
+        .join('')
+        document.getElementById('result').textContent = result
+        document.getElementById('copy_result').style.display = "block";
+    }
+
+
 
 }
