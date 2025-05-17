@@ -115,4 +115,16 @@ function btn_send() {
         document.getElementById('result').textContent = result
         document.getElementById('copy_result').style.display = "block";
     }
+
+    //HEXADECIMAL
+    else if (code_type == "Hexadecimal") {
+        const result = user_text
+        .split('')
+        .map(char => {
+            return char.charCodeAt(0).toString(16);
+        })
+        .join(', ')
+        document.getElementById('result').textContent = result
+        document.getElementById('copy_result').style.display = "block";
+    }
 }
