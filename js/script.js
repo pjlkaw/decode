@@ -25,15 +25,31 @@ function main_card() {
             if (code_type == "Cifra de César") {
                 document.getElementById('cesar_spacing').style.display = "block"
             }
+            else {
+                document.getElementById('cesar_spacing').style.display = "none"
+            }
         })
     })
 }
 
+//home-btn
+function home_btn() {
+    const cripto = document.querySelector('.cripto')
+    cripto.style.display = "none"
+    const section = document.getElementById('card_section')
+    section.style.display = "flex"
+}
+
 //copiar resultado
 function copy_result() {
-    navigator.clipboard.writeText(document.getElementById('result').textContent)
-        .then(() => alert("Texto copiado!"))
-        .catch(() => alert("Falha ao copiar o texto"));
+    const result = document.getElementById('result').textContent
+    if (result != "") {
+        navigator.clipboard.writeText(result);
+        alert("Texto copiado!")
+    }
+    else {
+        alert("Não foi possível copiar cripitografia")
+    }
 }
 
 //Criptografias
@@ -153,4 +169,7 @@ function btn_send() {
         document.getElementById('result').textContent = result;
         document.getElementById('copy_result').style.display = "block";
     }
+
+    
 }
+

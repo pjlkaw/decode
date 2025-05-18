@@ -1,8 +1,8 @@
 /*cores*/
 :root {
-    --green: rgba(71, 106, 74, 0.788);
-    --black: rgb(28, 28, 28);
-    --white: rgb(255, 255, 238);
+    --purple: #6a3ab8bc;
+    --black: #1c1c1c;
+    --white: #dfdfdf;
 }
 
 :root {
@@ -25,7 +25,7 @@ body {
 .decode-container {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, var(--black), var(--green));
+    background: linear-gradient(to bottom, var(--black), var(--purple));
 }
 
 /*Header*/
@@ -36,7 +36,7 @@ header {
     justify-content: center;
     padding: 5rem;
     background-color: var(--black);
-    color: var(--green);
+    color: var(--purple);
     font-family: var(--titulo);
 }
 
@@ -139,10 +139,6 @@ header h1 i {
     font-size: 13px;
 }
 
-.main_card .cesar {
-
-}
-
 /*Resultado*/
 
 .cripto {
@@ -150,6 +146,17 @@ header h1 i {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+}
+
+/*home-btn*/
+.home_btn {
+    padding-bottom: 2rem;
+    cursor: pointer;
+}
+
+.home_btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out ;
 }
 
 /*espaçamento césar*/
