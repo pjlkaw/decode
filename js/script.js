@@ -169,7 +169,5 @@ function btn_send() {
         document.getElementById('result').textContent = result;
         document.getElementById('copy_result').style.display = "block";
     }
-
-    
 }
 
