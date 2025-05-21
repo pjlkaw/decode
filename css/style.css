@@ -273,7 +273,7 @@ header h1 i {
 
 .info_content .content h2 {
     font-size: 25px;
-    font-weight: 200;
+    font-weight: 300;
     margin-bottom: 5px;
 }
 
@@ -307,6 +307,10 @@ footer a {
     cursor: pointer;
 }
 
+
+
+
+
 @media (max-width: 600px) {
 
     .main_card {
@@ -321,8 +325,9 @@ footer a {
         width: 100%;
     }
 
-    .info-content .content h2 {
-        font-size: 30px;
+    .info_content .content h2 {
+        font-size: 25px;
+        font-weight: 900;
     }
 
     .info_content .content .ex { 
