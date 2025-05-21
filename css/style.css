@@ -111,11 +111,11 @@ header h1 i {
 
 .main_card {
     width: 40%;
-    height: 10rem;
+    height: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background-color: var(--black);
     border-radius: 10px;
     padding: 10px;
@@ -305,4 +305,34 @@ footer a {
     color: var(--white);
     text-underline-offset: 2px;
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .main_card {
+        width: 90%;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    .cripto .result {
+        width: 100%;
+    }
+
+    .info-content .content h2 {
+        font-size: 30px;
+    }
+
+    .info_content .content .ex { 
+        width: 70%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
 }

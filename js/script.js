@@ -14,6 +14,8 @@ function main_card() {
             const card_content = card.innerHTML;
             const code_type = card.getAttribute('data-code')
 
+            document.getElementById('result').textContent = ""
+
             //Exibe o card
             cripto.style.display = "flex"
             section.style.display = "none"
