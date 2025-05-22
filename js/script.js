@@ -69,6 +69,8 @@ function btn_send() {
     //CÓDIGO ALFABÉTICO
     if (code_type == "Código Alfabético") {
         const result = user_text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
         .toLowerCase()
         .split('')
         .map(char => {
@@ -97,6 +99,8 @@ function btn_send() {
         const shift = parseInt(document.getElementById('spacing').value);
 
         const result = user_text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
         .toLowerCase()
         .split('')
         .map(char => {
@@ -118,6 +122,8 @@ function btn_send() {
         const shift = 13;
 
         const result = user_text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
         .toLowerCase()
         .split('')
         .map(char => {
@@ -137,6 +143,9 @@ function btn_send() {
     //HEXADECIMAL
     else if (code_type == "Hexadecimal") {
         const result = user_text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
         .split('')
         .map(char => {
             return char.charCodeAt(0).toString(16);
@@ -163,6 +172,8 @@ function btn_send() {
         };
 
         const result = user_text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
         .toLowerCase()
         .split('')
         .map(char => morse_map[char] || char )
